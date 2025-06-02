@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root{
+    --colorBorde:#00ffaa
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 50px;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+.card{
+    width: 240px;
+    height: 290px;
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;  
+    position: relative;
+    box-shadow: 3px 3px 8px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    gap: 15px;
+    padding: 30px;
+}
+
+.card::after{
+    content: "";
+    width: 400px;
+    height: 450px;
+    left: 50%;            
+    top: 50%;             
+    transform: translate(-50%, -50%);
+    position: absolute;
+    animation: rotate 3s linear infinite;
+    animation-play-state: running;
+    opacity: 1;
+    transition: all 0.7s;
+    /*background: conic-gradient(#ff4545, #00ff99, #006aff, #ff0095, #ff4545);**/
+    background: conic-gradient(var(--colorBorde),transparent 30%);
+}
+
+.card:hover::after{
+    transition: all 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease;
+}
+
+.card::before{
+    content: "";
+    width: 228px;
+    height: 278px;
+    left: 50%;            
+    top: 50%;               
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: black;
+    z-index: 10;
+    border-radius: 10px;
+    filter: blur(3px);
+}
+
+p {
+    position: relative;
+    color: 	#c3c3c3;
+    z-index: 20;
+}
+
+h2 {
+    position: relative;
+    color: #d8d2d2;
+    z-index: 20;
+}
+
+@keyframes rotate {
+    0%{
+        transform: translate(-50%,-50%) rotatez(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotatez(-360deg);
+    }
+}
+
+#color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #fff;
+  outline: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+#color::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 50%;
+}
+
+#color::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+#color::-moz-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
