@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root{
-    --colorBorde:#00ffaa
+    --colorBorde1:#ff4545;
+    --colorBorde2:#00ff99;
+    --colorBorde3:#006aff;
+    --colorBorde4:#ff0095;
+    --colorBorde5:#ff4545;
 }
 
 *{
@@ -50,15 +54,16 @@ body{
     transform: translate(-50%, -50%);
     position: absolute;
     animation: rotate 3s linear infinite;
-    animation-play-state: running;
+    animation-play-state: paused;
     opacity: 1;
     transition: all 0.7s;
     /*background: conic-gradient(#ff4545, #00ff99, #006aff, #ff0095, #ff4545);**/
-    background: conic-gradient(var(--colorBorde),transparent 30%);
+    background: conic-gradient(var(--colorBorde1),var(--colorBorde2),var(--colorBorde3),var(--colorBorde4),var(--colorBorde5));
 }
 
 .card:hover::after{
     transition: all 0.5s;
+    animation-play-state: running;
 }
 
 .card:hover {
@@ -102,7 +107,7 @@ h2 {
     }
 }
 
-#color {
+.color {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -118,17 +123,32 @@ h2 {
 }
 
 
-#color::-webkit-color-swatch-wrapper {
+.color::-webkit-color-swatch-wrapper {
   padding: 0;
   border-radius: 50%;
 }
 
-#color::-webkit-color-swatch {
+.color::-webkit-color-swatch {
   border: none;
   border-radius: 50%;
 }
 
-#color::-moz-color-swatch {
+.color::-moz-color-swatch {
   border: none;
   border-radius: 50%;
+}
+
+.colorContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+}
+
+.colorContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }

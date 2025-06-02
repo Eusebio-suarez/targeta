@@ -1,14 +1,18 @@
 //elementon card
 const card = document.getElementById("card")
 
-//input con el color
-const color = document.getElementById("color")
+//obtener todos los inputs de tipo color
+const colors = document.querySelectorAll(".color")
 
-//evento que llama a la funcion
-color.addEventListener("input",actualizarValor)
+//valores iniciales de los inputs
+colors[0].value="#ff4545"
+colors[1].value="#00ff99"
+colors[2].value="#006aff"
+colors[3].value="#ff0095"
+colors[4].value="#ff4545"
 
-//funcion para actualizar el valor del input
-function actualizarValor() {
-    console.log(color.value)
-    document.documentElement.style.setProperty(`--colorBorde`,`${color.value}`)
+
+//funcion para actualizar el color en la targeta
+function actualizarColor(id) {
+    document.documentElement.style.setProperty(`--colorBorde${id}`,`${colors[id-1].value}`)
 }

@@ -11,7 +11,28 @@
         <h2>Titulo</h2>
         <p>Personaliza la Targeta a tu Gusto Cambiando Colores y Fondos para despues copiar tu Targeta Peronalizada y Usarla ¡Donde Quieras!.</p>
     </div>
-    <input type="color" name="colorInput" id="color">
+    <div class="colorContainer">
+        <div class="colorContent">
+            <label for="colorInput">Color #1</label>
+            <input type="color" name="colorInput" oninput="actualizarColor(1)" class="color">
+        </div>
+        <div class="colorContent">
+            <label for="colorInput">Color #2</label>
+            <input type="color" name="colorInput" oninput="actualizarColor(2)" class="color">
+        </div>
+        <div class="colorContent">
+            <label for="colorInput">Color #3</label>
+            <input type="color" name="colorInput" oninput="actualizarColor(3)" class="color">
+        </div>
+        <div class="colorContent">
+            <label for="colorInput">Color #4</label>
+            <input type="color" name="colorInput" oninput="actualizarColor(4)" class="color">
+        </div>
+        <div class="colorContent">
+            <label for="colorInput">Color #5</label>
+            <input type="color" name="colorInput" oninput="actualizarColor(5)" class="color">
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
